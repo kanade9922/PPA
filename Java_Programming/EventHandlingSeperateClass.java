@@ -4,16 +4,12 @@ import java.awt.event.*;
 
 class MarvellousListener implements ActionListener
 {
-    public void actionPerformed(ActionEv
-    
-    
-    
-    ent aobj)
+    public void actionPerformed(ActionEvent aobj)
             {
-                JOptionPane.showMessageDialog(null,"Button Clicked....");
+                System.out.println("Button Clicked....");
             }
 }
-class EventHandlingSeperateClassXX
+class EventHandlingSeperateClass
 {
     public static void main(String A[])
     {
@@ -23,8 +19,8 @@ class EventHandlingSeperateClassXX
 
         bobj.setBounds(100, 100, 150, 50);   // x, y, width, height 
 
-       MarvellousListener mobj = new MarvellousListener();
-        bobj.addActionListener(mobj);
+       
+        bobj.addActionListener(new MarvellousListener());
 
         fobj.add(bobj);
         
